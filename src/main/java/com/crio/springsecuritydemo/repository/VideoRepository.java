@@ -9,7 +9,8 @@ import org.springframework.stereotype.Repository;
 import com.crio.springsecuritydemo.model.Video;
 
 @EnableJpaRepositories
-@Repository
+
+@Repository("jdbcVideoRepository")
 public interface VideoRepository extends JpaRepository<Video, Long> {
     List<Video> findByAvailable(boolean available);
 
